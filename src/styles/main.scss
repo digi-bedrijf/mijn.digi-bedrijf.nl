@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'NotoSans';
+  src: url('/assets/font/Noto_Sans/NotoSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NotoSans';
+  src: url('/assets/font/Noto_Sans/NotoSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NotoSans';
+  src: url('/assets/font/Noto_Sans/NotoSans-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NotoSans';
+  src: url('/assets/font/Noto_Sans/NotoSans-Italics.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+body {
+  font-family: 'NotoSans', sans-serif;
+}
+
+body.main.layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 
+    'header'
+    'main'
+    'footer';
+
+  & > header.header {
+    grid-area: header;
+  }
+
+  & > main.main {
+    grid-area: main;
+  }
+
+  & > footer.footer {
+    grid-area: footer;
+  }
+}
